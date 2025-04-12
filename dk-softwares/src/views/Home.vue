@@ -1,5 +1,6 @@
 <script setup>
-import { FwbButton } from 'flowbite-vue'
+  import { FwbButton} from 'flowbite-vue'
+
 </script>
 
 <template>
