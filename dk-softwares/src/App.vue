@@ -5,6 +5,7 @@
     FwbNavbarCollapse,
     FwbNavbarLink,
     FwbNavbarLogo,
+    FwbButton
   } from 'flowbite-vue'
 </script>
 
@@ -12,7 +13,7 @@
   <fwb-navbar solid>
     <template #logo>
       <fwb-navbar-logo alt="Flowbite logo" image-url="vite.svg" link="#">
-        dk software solutions
+        <span style="color: darkblue">dk</span>software<span style="color: darkblue">solutions</span>
       </fwb-navbar-logo>
     </template>
     <template #default="{isShowMenu}">
@@ -30,6 +31,11 @@
           Contact
         </fwb-navbar-link>
       </fwb-navbar-collapse>
+    </template>
+    <template #right-side>
+      <fwb-button>
+        Get started
+      </fwb-button>
     </template>
   </fwb-navbar>
 
