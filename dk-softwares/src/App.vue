@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <fwb-navbar solid>
+  <fwb-navbar solid class="">
     <template #logo>
       <fwb-navbar-logo alt="Flowbite logo" image-url="vite.svg" link="#">
         <span style="color: darkblue">dk</span>software<span style="color: darkblue">solutions</span>
