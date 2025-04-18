@@ -6,14 +6,52 @@
 @source "../node_modules/flowbite-vue";
 
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('./assets/fonts/KohSantepheap-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+  font-family: 'KohSantepheap';
+  src: url('/fonts/KohSantepheap/KohSantepheap-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KohSantepheap';
+  src: url('/fonts/KohSantepheap/KohSantepheap-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KohSantepheap';
+  src: url('/fonts/KohSantepheap/KohSantepheap-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KohSantepheap';
+  src: url('/fonts/KohSantepheap/KohSantepheap-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KohSantepheap';
+  src: url('/fonts/KohSantepheap/KohSantepheap-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway VF';
+  src: url('/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway VF';
+  src: url('/fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
   /* Beispiel: Anwenden auf den gesamten Body */
-  body {
-    font-family: 'MyCustomFont', sans-serif;
+  html {
+    font-family: 'Raleway VF', sans-serif;
   }
-  
