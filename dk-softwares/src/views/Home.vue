@@ -1,6 +1,12 @@
 <script setup>
-  import { FwbButton, FwbCard } from 'flowbite-vue'
+  import { FwbButton, FwbCard, FwbInput, FwbSelect } from 'flowbite-vue'
   import { DraftingCompass, FunnelPlus, ServerCog, ReceiptText, CodeXml } from 'lucide-vue-next'
+
+  const greeting = [
+    {value: "", name: ""},
+    {value: "Herr", name: "Herr"}, 
+    {value: "Frau", name: "Frau"}
+  ]
 </script>
 
 <template>
@@ -290,8 +296,33 @@
   </section>
 
   <!--Section Contact-->
-  <section class="pl-33 pr-33 pt-25 pb-10">
-    
+  <section class="pl-33 pr-33 pt-25 pb-10 bg-[#004366]">
+    <div class="flex flex-col items-center">
+      <h2 class="text-4xl font-semibold mb-10 leading-tight">
+        Jetzt unverbindliches Erstgespräch anfragen!
+      </h2>
+      <form>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <fwb-select
+            class="col-span-1"
+            v-model="selected"
+            :options="greeting"
+            label="Anrede"
+          />
+          <fwb-input
+            class="col-start-1 row-start-2"
+            v-model="name"
+            placeholder="enter your first name"
+            label="Vorname"
+          />
+          <fwb-input
+            v-model="last_name"
+            placeholder="enter your last name"
+            label="Nachname"
+          />
+        </div>
+      </form>
+    </div>
   </section>
 
 </template>
