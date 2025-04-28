@@ -7,7 +7,7 @@
     FwbAccordionHeader,
     FwbAccordionPanel } from 'flowbite-vue'
 
-  import { DraftingCompass, FunnelPlus, ServerCog, ReceiptText, CodeXml } from 'lucide-vue-next'
+  import { Eye, FunnelPlus, ServerCog, ReceiptText, CodeXml, Wrench, MessageCircle } from 'lucide-vue-next'
 
   const greeting = [
     {value: "", name: ""},
@@ -33,16 +33,21 @@
       <div class="flex flex-row space-around">
         <!--Text on let site-->
         <div class="flex flex-col item-start mr-25">
-          <h5 class="text-xl font-normal mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <h1 class="text-5xl font-bold mb-4 leading-tight">Für jedes Problem<br>gibt es auch eine Lösung</h1>
-          <p>
-            Und hier noch ein bisschen bla bla, dass ich mir 
-            später noch etwas überlegen muss. Aber hauptsache 
-            hier steht ein bisschen Text fürs Layout und so
+          <h5 class="text-xl font-normal mb-1 leading-normal">Passgenaue Software für Ihr Business</h5>
+          <h1 class="text-5xl font-bold mb-4 leading-tight">Maßgeschneidert statt<br>"One size fits all"</h1>
+          <p class="mr-20">
+            Ich nehme mir die Zeit, um genau zu verstehen, wie Ihr Team heute arbeitet –  
+            und wie es morgen noch effizienter werden kann.  <br>
+            Ob Website, Web-App oder robuste Server-/Desktop-Lösung:  
+            Nur das was auch wirklich gebraucht wird schafft es in die Ziel-Lösung!<br><br>
+            Automatisierung von täglichen Routineaufgaben, Optimierung bestehender
+            Prozesse oder Vereinfachung komplexer Workloads - Ich helfe Ihnen 
+            wertvolle Zeit zu sparen. <br>
+            <span class="font-semibold">Jetzt Kontakt aufnehmen - Ich stehe Ihnen gerne zur Verfügung </span>
           </p>
           <div class="flex flex-row item-start leading-tight mt-3">  
-            <FwbButton color="dark" class="mr-5 cursor-pointer">Contact us</FwbButton>
-            <FwbButton color="dark" outline class="cursor-pointer">Learn more</FwbButton>
+            <FwbButton color="dark" class="mr-5 cursor-pointer">Contact me</FwbButton>
+            <FwbButton color="dark" outline class="cursor-pointer">More Info</FwbButton>
           </div>
         </div>
       </div>
@@ -62,26 +67,26 @@
   <section class="pl-33 pr-33 pt-25 pb-10">
     <div class="flex items-center justify-between">
       <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+        <Eye class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Benutzerzentrierte Usability</h5>
+          <p>Intuitive Oberflächen, maßgeschneidert auf Ihre Zielgruppe.</p>
         </div>
       </div>
       
-      <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+      <div class="flex flex-row ml-10 mr-10"> 
+        <Wrench class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Lösungsorientierte Entwicklung</h5>
+          <p>Echte Softwarelösungen – kein unnötiger Funktionsballast.</p>
         </div>
       </div>
 
       <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+        <MessageCircle class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Persönliche Beratung</h5>
+          <p>Fundierte Expertenberatung für optimale Entscheidungen.</p>
         </div>
       </div>
     </div>
