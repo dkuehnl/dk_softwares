@@ -12,8 +12,7 @@
 <template>
   <fwb-navbar solid>
     <template #logo>
-      <fwb-navbar-logo alt="Flowbite logo" image-url="vite.svg" link="#">
-        <span style="color: darkblue">dk</span>software<span style="color: darkblue">solutions</span>
+      <fwb-navbar-logo alt="dk software solutions" image-url="Logo_normal.svg" link="#">
       </fwb-navbar-logo>
     </template>
     <template #default="{isShowMenu}">
