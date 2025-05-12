@@ -98,7 +98,7 @@
     <div class="flex flex-row">
 
       <!--Left Box-->
-      <div class="flex items-start w-full max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:w-[2000px]">
+      <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1500px]">
         <img 
           src="/images/customer_relation2.jpg" 
           alt="Picture" 
@@ -109,21 +109,63 @@
       <!--Right Box-->
       <div class="flex flex-col ml-25">
         <h2 class="text-4xl font-semibold mb-3 leading-tight">
-          Überschrift für diesen Abschnitt muss ich mir noch überlegen
+          Der Fahrplan für Ihre Lösung
         </h2>
-        <h5 class="text-lg font-semibold mb-1 leading-normal">
-          Noch so eine Unterüberschriftabsatzdings wo auch noch bissl Text 
-          rein muss aber ich auch noch keinen Plan hab was und wie viel
-        </h5>
-        <p>
-          Und auch den Text hier drunter. Irgendwas mit perfekt zugeschnittener
-          Software ohne viel unnötigen Schnick-Schnack. Nur die Funktionen die 
-          auch wirklich gebraucht werden. 
-          Außerdem erfinden wir das Rad nicht neu - das heißt wenn es schon 
-          eine passende Software auf dem Markt gibt, wird lediglich eine Beratungs-
-          Gebühr verrechnet (100€) 
-        </p>
+
+        <div class="space-y-6">
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 1: Analyse & Konzeption
+            </h5>
+            <p class="mt-2">
+              Ich tauche tief in Ihre Abläufe ein, identifiziere Schwachstellen und Bedürfnisse und sammele alle relevanten Fakten, um eine passgenaue Strategie zu entwickeln.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 2: Prototyp & Live-Demo
+            </h5>
+            <p class="mt-2">
+              Bevor der erste Code entsteht, liefere ich einen interaktiven Prototypen oder ein Architekturdiagramm, damit Sie frühzeitig Feedback geben und die Richtung mitbestimmen können.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 3: Entwicklung
+            </h5>
+            <p class="mt-2">
+              Gemeinsam optimieren wir kontinuierlich das Ergebnis: In regelmäßigen Reviews besprechen wir Fortschritt, Anpassungen und etwaige Herausforderungen.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 4: Qualitätssicherung
+            </h5>
+            <p class="mt-2">
+              Durch automatisierte Tests (Unit, Integration & Last) stelle ich sicher, dass Ihre Lösung stabil, performant und nahtlos in Ihre Umgebung integriert läuft.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 5: Go‑Live & Übergabe
+            </h5>
+            <p class="mt-2">
+              Nach Ihrem finalen OK begleite ich den Start und unterstütze bei der reibungslosen Einführung, damit Sie direkt produktiv durchstarten können.
+            </p>
+          </section>
+        </div>
+
+        <div class="flex justify-center mt-8">
+          <h5 class="text-lg font-semibold cursor-pointer hover:underline">
+            Mehr erfahren
+          </h5>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -311,24 +353,27 @@
   <section class="pl-33 pr-33 pt-10 pb-20">
     <fwb-accordion flushed>
       <fwb-accordion-panel>
-        <fwb-accordion-header>What is Flowbite?</fwb-accordion-header>
+        <fwb-accordion-header>Verkaufe ich auch Softwarelizenzen?</fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
-          </p>
-          <p class="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and start developing websites even faster with components on top of Tailwind CSS.
+            Kurz und knapp: Nein. <br>
+            Sollte sich in Phase 1 heraustellen, dass es schon eine sehr gut passende, fertige 
+            Software auf dem Markt gibt, dann werde ich Ihnen genau diese vorschlagen. 
+            Ich helfe Ihnen natürlich auf Wunsch bei der Inbetriebnahme bzw. der Integration, die
+            Lizenzen müssen Sie allerdings selbst kaufen. 
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
       <fwb-accordion-panel>
-        <fwb-accordion-header>Is there a Figma file available?</fwb-accordion-header>
+        <fwb-accordion-header>
+          Bei der Konzeptionierung haben wir eine fertige Softwarelösung gefunden. Für die Integration wird keine Unterstützung mehr benötigt. Was nun?
+        </fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.
-          </p>
-          <p class="text-gray-500 dark:text-gray-400">
-            Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.
+            Auch das ist kein Problem.<br>
+            Wenn eine gemeinsame Entscheidung zu gunsten der bestehenden Software gefallen ist und 
+            für die weitere Implementierung keine Hilfe von mir benötigt wird, dann stelle ich
+            lediglich eine kleine Beratungsgebür in Rechnung.
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
