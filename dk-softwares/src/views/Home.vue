@@ -7,7 +7,7 @@
     FwbAccordionHeader,
     FwbAccordionPanel } from 'flowbite-vue'
 
-  import { DraftingCompass, FunnelPlus, ServerCog, ReceiptText, CodeXml } from 'lucide-vue-next'
+  import { Eye, FunnelPlus, ServerCog, ReceiptText, CodeXml, Wrench, MessageCircle } from 'lucide-vue-next'
 
   const greeting = [
     {value: "", name: ""},
@@ -33,16 +33,21 @@
       <div class="flex flex-row space-around">
         <!--Text on let site-->
         <div class="flex flex-col item-start mr-25">
-          <h5 class="text-xl font-normal mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <h1 class="text-5xl font-bold mb-4 leading-tight">Für jedes Problem<br>gibt es auch eine Lösung</h1>
-          <p>
-            Und hier noch ein bisschen bla bla, dass ich mir 
-            später noch etwas überlegen muss. Aber hauptsache 
-            hier steht ein bisschen Text fürs Layout und so
+          <h5 class="text-xl font-normal mb-1 leading-normal">Passgenaue Software für Ihr Business</h5>
+          <h1 class="text-5xl font-bold mb-4 leading-tight">Maßgeschneidert statt<br>"One size fits all"</h1>
+          <p class="mr-20">
+            Ich nehme mir die Zeit, um genau zu verstehen, wie Ihr Team heute arbeitet –  
+            und wie es morgen noch effizienter werden kann.  <br>
+            Ob Website, Web-App oder robuste Server-/Desktop-Lösung:  
+            Nur das was auch wirklich gebraucht wird schafft es in die Ziel-Lösung!<br><br>
+            Automatisierung von täglichen Routineaufgaben, Optimierung bestehender
+            Prozesse oder Vereinfachung komplexer Workloads - Ich helfe Ihnen 
+            wertvolle Zeit zu sparen. <br>
+            <span class="font-semibold">Jetzt Kontakt aufnehmen - Ich stehe Ihnen gerne zur Verfügung </span>
           </p>
           <div class="flex flex-row item-start leading-tight mt-3">  
-            <FwbButton color="dark" class="mr-5 cursor-pointer">Contact us</FwbButton>
-            <FwbButton color="dark" outline class="cursor-pointer">Learn more</FwbButton>
+            <FwbButton color="dark" class="mr-5 cursor-pointer">Contact me</FwbButton>
+            <FwbButton color="dark" outline class="cursor-pointer">More Info</FwbButton>
           </div>
         </div>
       </div>
@@ -62,26 +67,26 @@
   <section class="pl-33 pr-33 pt-25 pb-10">
     <div class="flex items-center justify-between">
       <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+        <Eye class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Benutzerzentrierte Usability</h5>
+          <p>Intuitive Oberflächen, maßgeschneidert auf Ihre Zielgruppe.</p>
         </div>
       </div>
       
-      <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+      <div class="flex flex-row ml-10 mr-10"> 
+        <Wrench class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Lösungsorientierte Entwicklung</h5>
+          <p>Echte Softwarelösungen – kein unnötiger Funktionsballast.</p>
         </div>
       </div>
 
       <div class="flex flex-row"> 
-        <DraftingCompass class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
+        <MessageCircle class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
         <div class="flex flex-col ml-3">
-          <h5 class="text-lg font-semibold mb-1 leading-normal">Individuelle Softwarelösungen</h5>
-          <p>Präzise abgestimmt auf Ihre Bedürfnisse.</p>
+          <h5 class="text-lg font-semibold mb-1 leading-normal">Persönliche Beratung</h5>
+          <p>Fundierte Expertenberatung für optimale Entscheidungen.</p>
         </div>
       </div>
     </div>
@@ -93,7 +98,7 @@
     <div class="flex flex-row">
 
       <!--Left Box-->
-      <div class="flex items-start w-full max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:w-[2000px]">
+      <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1500px]">
         <img 
           src="/images/customer_relation2.jpg" 
           alt="Picture" 
@@ -104,21 +109,63 @@
       <!--Right Box-->
       <div class="flex flex-col ml-25">
         <h2 class="text-4xl font-semibold mb-3 leading-tight">
-          Überschrift für diesen Abschnitt muss ich mir noch überlegen
+          Der Fahrplan für Ihre Lösung
         </h2>
-        <h5 class="text-lg font-semibold mb-1 leading-normal">
-          Noch so eine Unterüberschriftabsatzdings wo auch noch bissl Text 
-          rein muss aber ich auch noch keinen Plan hab was und wie viel
-        </h5>
-        <p>
-          Und auch den Text hier drunter. Irgendwas mit perfekt zugeschnittener
-          Software ohne viel unnötigen Schnick-Schnack. Nur die Funktionen die 
-          auch wirklich gebraucht werden. 
-          Außerdem erfinden wir das Rad nicht neu - das heißt wenn es schon 
-          eine passende Software auf dem Markt gibt, wird lediglich eine Beratungs-
-          Gebühr verrechnet (100€) 
-        </p>
+
+        <div class="space-y-6">
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 1: Analyse & Konzeption
+            </h5>
+            <p class="mt-2">
+              Ich tauche tief in Ihre Abläufe ein, identifiziere Schwachstellen und Bedürfnisse und sammele alle relevanten Fakten, um eine passgenaue Strategie zu entwickeln.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 2: Prototyp & Live-Demo
+            </h5>
+            <p class="mt-2">
+              Bevor der erste Code entsteht, liefere ich einen interaktiven Prototypen oder ein Architekturdiagramm, damit Sie frühzeitig Feedback geben und die Richtung mitbestimmen können.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 3: Entwicklung
+            </h5>
+            <p class="mt-2">
+              Gemeinsam optimieren wir kontinuierlich das Ergebnis: In regelmäßigen Reviews besprechen wir Fortschritt, Anpassungen und etwaige Herausforderungen.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 4: Qualitätssicherung
+            </h5>
+            <p class="mt-2">
+              Durch automatisierte Tests (Unit, Integration & Last) stelle ich sicher, dass Ihre Lösung stabil, performant und nahtlos in Ihre Umgebung integriert läuft.
+            </p>
+          </section>
+
+          <section>
+            <h5 class="text-lg font-semibold leading-normal">
+              Phase 5: Go‑Live & Übergabe
+            </h5>
+            <p class="mt-2">
+              Nach Ihrem finalen OK begleite ich den Start und unterstütze bei der reibungslosen Einführung, damit Sie direkt produktiv durchstarten können.
+            </p>
+          </section>
+        </div>
+
+        <div class="flex justify-center mt-8">
+          <h5 class="text-lg font-semibold cursor-pointer hover:underline">
+            Mehr erfahren
+          </h5>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -306,24 +353,27 @@
   <section class="pl-33 pr-33 pt-10 pb-20">
     <fwb-accordion flushed>
       <fwb-accordion-panel>
-        <fwb-accordion-header>What is Flowbite?</fwb-accordion-header>
+        <fwb-accordion-header>Verkaufe ich auch Softwarelizenzen?</fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
-          </p>
-          <p class="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and start developing websites even faster with components on top of Tailwind CSS.
+            Kurz und knapp: Nein. <br>
+            Sollte sich in Phase 1 heraustellen, dass es schon eine sehr gut passende, fertige 
+            Software auf dem Markt gibt, dann werde ich Ihnen genau diese vorschlagen. 
+            Ich helfe Ihnen natürlich auf Wunsch bei der Inbetriebnahme bzw. der Integration, die
+            Lizenzen müssen Sie allerdings selbst kaufen. 
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
       <fwb-accordion-panel>
-        <fwb-accordion-header>Is there a Figma file available?</fwb-accordion-header>
+        <fwb-accordion-header>
+          Bei der Konzeptionierung haben wir eine fertige Softwarelösung gefunden. Für die Integration wird keine Unterstützung mehr benötigt. Was nun?
+        </fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.
-          </p>
-          <p class="text-gray-500 dark:text-gray-400">
-            Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.
+            Auch das ist kein Problem.<br>
+            Wenn eine gemeinsame Entscheidung zu gunsten der bestehenden Software gefallen ist und 
+            für die weitere Implementierung keine Hilfe von mir benötigt wird, dann stelle ich
+            lediglich eine kleine Beratungsgebür in Rechnung.
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
