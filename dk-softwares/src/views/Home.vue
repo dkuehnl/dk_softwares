@@ -356,11 +356,9 @@
         <fwb-accordion-header>Verkaufe ich auch Softwarelizenzen?</fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Kurz und knapp: Nein. <br>
-            Sollte sich in Phase 1 heraustellen, dass es schon eine sehr gut passende, fertige 
-            Software auf dem Markt gibt, dann werde ich Ihnen genau diese vorschlagen. 
-            Ich helfe Ihnen natürlich auf Wunsch bei der Inbetriebnahme bzw. der Integration, die
-            Lizenzen müssen Sie allerdings selbst kaufen. 
+            Leider verkaufe ich keine Softwarelizenzen direkt.<br>
+            Sollte sich aber in Phase 1 (Analyse & Konzeption) herauskristallisieren, dass eine fertige Lösung Ihre Anforderungen optimal erfüllt, schlage ich Ihnen diese gerne vor.  
+            Auf Wunsch unterstütze ich Sie bei Installation & Integration – die Lizenzbestellung übernehmen Sie selbst.<br>
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
@@ -370,33 +368,64 @@
         </fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Auch das ist kein Problem.<br>
-            Wenn eine gemeinsame Entscheidung zu gunsten der bestehenden Software gefallen ist und 
-            für die weitere Implementierung keine Hilfe von mir benötigt wird, dann stelle ich
-            lediglich eine kleine Beratungsgebür in Rechnung.
+            Kein Thema – auch das geht.<br>
+            Wenn Sie sich für eine vorhandene Softwarelösung entscheiden und 
+            keine weitere Implementierungs-Hilfe wünschen, berechne ich eine kleine Pauschale
+            (Aufwandsabhängig, max. 3h).  
+            So halten wir den Aufwand transparent und fair.
           </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
       <fwb-accordion-panel>
-        <fwb-accordion-header>What are the differences between Flowbite and Tailwind UI?</fwb-accordion-header>
+        <fwb-accordion-header>Ist auch die Übernahme/Weiterentwicklung von Bestandssoftware möglich?</fwb-accordion-header>
         <fwb-accordion-content>
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.
+            Eine pauschale Antwort ist hier schwierig – jedes System ist anders.  
+            Für eine Übernahme oder Weiterentwicklung führe ich zunächst ein kurzes 
+            <strong>Initialaudit</strong> durch, das folgende Schritte umfasst:
           </p>
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
-            However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.
-          </p>
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Learn more about these technologies:
-          </p>
-          <ul class="list-disc ps-5 text-gray-500 dark:text-gray-400">
-            <li>
-              <a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a>
-            </li>
-            <li>
-              <a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a>
-            </li>
+          <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
+            <li>Analyse vorhandener Dokumentationen</li>
+            <li>Quellcode-Review (falls verfügbar)</li>
+            <li>Bewertung von Architektur und Abhängigkeiten</li>
+            <li>Aufwandsschätzung & Zeitrahmen</li>
           </ul>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Gerade bei älteren Systemen fehlen oft Dokumentation oder Testumgebungen – das gehört alles ins Audit.<br>
+            <strong>Sprechen Sie mich an, ich erstelle Ihnen ein unverbindliches Angebot!</strong>
+          </p>
+        </fwb-accordion-content>
+      </fwb-accordion-panel>
+      <fwb-accordion-panel>
+        <fwb-accordion-header>Wie lange dauert eine individuelle Softwareentwicklung im Mittel?</fwb-accordion-header>
+        <fwb-accordion-content>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Das ist natürlich stark abhängig vom Art und Umfang der Lösung. <br>
+            Eine einfache Unternehmenswebsite oder kleine Tools wie der Invoice-Manager sind meist in 3-4 Wochen realisierbar.<br>            Komplexere Lösungen, wie der Number-Converter oder Logfile-Parser hingegen benötigen meiste 3-5 Monate Entwicklungszeit. 
+            <br><br><strong>Ein genauer Zeitplan kann erst am Ende der Phase 1 generiert werden. </strong>
+          </p>
+        </fwb-accordion-content>
+      </fwb-accordion-panel>
+      <fwb-accordion-panel>
+        <fwb-accordion-header>Welche Frameworks und Technologien kommen zum Einsatz?</fwb-accordion-header>
+        <fwb-accordion-content>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Für Websites und Web-Applikationen setze ich im Frontend-Bereich auf Vue.js, für ein mögliches Backend 
+            kommt Python zum Einsatz. <br>
+            Gehostet wird auf der Cloud-Infrastruktur von Amazon AWS. <br>
+            Für Desktop- oder Serveranwendungen nutze ich je nach Einsatzzweck C/C++ oder Python. 
+          </p>
+        </fwb-accordion-content>
+      </fwb-accordion-panel>
+      <fwb-accordion-panel>
+        <fwb-accordion-header>Wie sieht es mit Support und Wartung nach Projektabschluss aus?</fwb-accordion-header>
+        <fwb-accordion-content>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Auch das ist Bestandteil der Bedarfsanalyse in Phase 1. 
+            Aus Ressourcen-Gründen kann ich keinen 24/7-Support mit zeitnaher Reaktion anbieten. 
+            In gewissen Umfang ist aber auch nach Projektabschluss noch eine weitere Betreuung möglich. <br>
+            <strong>Sprechen Sie mich gerne darauf an!</strong>
+          </p>
         </fwb-accordion-content>
       </fwb-accordion-panel>
     </fwb-accordion>
@@ -408,8 +437,7 @@
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">dksoftwaresolutions</span>
+            <img src="/images/Logo_weiss.png" class="mr-3 h-8" alt="dk-software-solutions" />
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

@@ -12,7 +12,7 @@
 <template>
   <fwb-navbar solid>
     <template #logo>
-      <fwb-navbar-logo alt="dk software solutions" image-url="images/Logo_normal.svg" link="#">
+      <fwb-navbar-logo alt="dk software solutions" image-url="images/Logo_normal.png" link="#">
       </fwb-navbar-logo>
     </template>
     <template #default="{isShowMenu}">
