@@ -24,7 +24,7 @@
           <RouterLink to="/about" class="text-lg text-shadow-md">Services</RouterLink>
         </fwb-navbar-link>
         <fwb-navbar-link link="#">
-          <RouterLink to="/about" class="text-lg text-shadow-md">Pricing</RouterLink>
+          <RouterLink to="/projects" class="text-lg text-shadow-md">Projects</RouterLink>
         </fwb-navbar-link>
         <fwb-navbar-link link="#">
           <RouterLink to="/about" class="text-lg text-shadow-md">Contact</RouterLink>

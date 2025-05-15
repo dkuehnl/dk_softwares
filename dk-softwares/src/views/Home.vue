@@ -18,10 +18,10 @@
 
 <template>
 
-  <!--Landing-Page-->
+  <!--Landing-Page bg-[radial-gradient(circle_at_center,_#b3e6ff_20%,_#0088cc_50%,_#0077b3_80%)]-->
   <section class="
     pt-15 pl-33 pr-33 
-    bg-[radial-gradient(circle_at_center,_#b3e6ff_20%,_#0088cc_50%,_#0077b3_80%)]
+    
     h-[calc(100vh-4rem)]
     max-h-[calc(768px-4rem)]
     md:max-h-[calc(900px-4rem)]
@@ -55,7 +55,7 @@
       <!--Picture on right site-->
       <div class="flex items-start w-full max-w-3xl">
         <img 
-          src="/images/landing_page.jpg" 
+          src="/images/landing_page_2.png" 
           alt="Picture" 
           class="w-full h-auto object-contain rounded-tl-3xl rounded-br-3xl shadow-2xl shadow-black"
         />
@@ -65,6 +65,7 @@
 
   <!--Key-Values-->
   <section class="pl-33 pr-33 pt-25 pb-10">
+    <hr class="border-t border-blue-800 mb-16" />
     <div class="flex items-center justify-between">
       <div class="flex flex-row"> 
         <Eye class="w-14 h-14 text-blue-800 border-2 border-blue-800 p-1 rounded-md"/>
@@ -100,7 +101,7 @@
       <!--Left Box-->
       <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1500px]">
         <img 
-          src="/images/customer_relation2.jpg" 
+          src="/images/project_management.png" 
           alt="Picture" 
           class="w-full h-auto object-contain rounded-3xl shadow-2xl shadow-black"
         />
