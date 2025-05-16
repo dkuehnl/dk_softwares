@@ -1,130 +1,209 @@
-<script setup>
-  import { FwbSidebar, FwbSidebarItem, FwbSidebarDropdownItem } from 'flowbite-vue'
+<script setup lang="ts">
+  import { FwbButton } from 'flowbite-vue'
+  import {ref, computed} from 'vue'
+
+  const all_categories = ['Desktop-Application', 'CLI-Tools', 'Server-Application', 'Web']
+  const active_cat = ref<string[]>([])
+  const project = ref([
+    {
+        id: 1, 
+        title: 'Number Converter', 
+        img: '', 
+        description: 'Konvertiert schnell und unkompliziert große Mengen an Daten in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.',
+        categories: ['Desktop-Applications'],
+        link: ''
+    }, 
+    {
+        id: 2, 
+        title: 'easyDNS', 
+        img: '', 
+        description: 'Einfaches Tool zum Prüfen und Abfragen von DNS-Records über eine benutzerfreundliche GUI. ',
+        categories: ['Desktop-Applications'],
+        link: ''
+    }, 
+    {
+        id: 3, 
+        title: 'LetterShark', 
+        img: '', 
+        description: 'Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch noch genau auf den Workflow des Kunden abgestimmt ist. ',
+        categories: ['Desktop-Applications'],
+        link: ''
+    }, 
+    {
+        id: 4, 
+        title: 'SIP-RTT Analyzer', 
+        img: '/images/screen_sip_rta.png', 
+        description: 'Kleines, aber sehr effizientes CLI-Tool, dass nicht nur Paketlaufzeiten auf Netzwerkebene, sondern auch auf Application-Ebene misst und aufbereitet. ',
+        categories: ['CLI-Tool'],
+        link: ''
+    }, 
+    {
+        id: 5, 
+        title: 'SIP-Proxy', 
+        img: '', 
+        description: 'Ein kompletter SIP-Proxy aus Eigenentwicklung, welcher vollen Zugriff auf die SIP-Kommunikation gewährt und nahezu jeden Header manipulierbar macht.',
+        categories: ['Server-Application'],
+        link: ''
+    }, 
+    {
+        id: 6, 
+        title: 'Invoice-Manager', 
+        img: '', 
+        description: 'Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung von eigens ausgestellten Rechnungen.',
+        categories: ['Desktop-Applications'],
+        link: ''
+    }, 
+    {
+        id: 7, 
+        title: 'Website: ShutterSpecht', 
+        img: '', 
+        description: 'Unternehmenspräsentation für einen Fotografen.',
+        categories: ['Web'],
+        link: ''
+    }
+  ])
+
+  const filtered_projects = computed(() => {
+    if (active_cat.value.length === 0) {
+        return project.value
+    }
+    return project.value.filter(p => 
+        p.categories.some(cat => 
+            active_cat.value.includes(cat)
+        ))
+  })
+
+  function toggle_categorie(cat: string) {
+    const idx = active_cat.value.indexOf(cat)
+    if (idx === -1) {
+        active_cat.value.push(cat)
+    } else {
+        active_cat.value.splice(idx, 1)
+    }
+
+  function reset_categories() {
+    console.log("click")
+    active_cat.value = []
+  }
+  }
 </script>
 
 <template>
-    <section class="pt-15 pl-33 pr-33">
-        <div class="flex flex-row">
-            <div>
-                <fwb-sidebar>
-                    <fwb-sidebar-item>
-                    <template #icon>
-                        <svg
-                            class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 22 21"
-                        >
-                        <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                        <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                    </template>
-                    <template #default>Dashboard</template>
-                    </fwb-sidebar-item>
-                    <fwb-sidebar-item>
-                    <template #icon>
-                        <svg
-                            class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 18 18"
-                        >
-                        <path
-                            d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
-                        />
-                        </svg>
-                    </template>
-                    <template #default>Kanban</template>
-                    <template #suffix>
-                        <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-                    </template>
-                    </fwb-sidebar-item>
-                    <fwb-sidebar-dropdown-item>
-                    <template #icon>
-                        <svg
-                            class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 22 21"
-                        >
-                        <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                        <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                        </svg>
-                    </template>
-                    <template #trigger> E-commerce </template>
-                    <template #default>
-                        <fwb-sidebar-item class="pl-11"> Products </fwb-sidebar-item>
-                        <fwb-sidebar-item class="pl-11"> Sign In </fwb-sidebar-item>
-                        <fwb-sidebar-item class="pl-11"> Sign Up </fwb-sidebar-item>
-                    </template>
-                    </fwb-sidebar-dropdown-item>
-                </fwb-sidebar>
-            </div>
-            <div>
-                <div class="px-4 sm:px-0">
-                    <h3 class="text-base/7 font-semibold text-gray-900">Applicant Information</h3>
-                    <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">Personal details and application.</p>
-                </div>
-                <div class="mt-6 border-t border-gray-100">
-                    <dl class="divide-y divide-gray-100">
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">Full name</dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Margot Foster</dd>
-                        </div>
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">Application for</dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Backend Developer</dd>
-                        </div>
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">Email address</dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
-                        </div>
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">Salary expectation</dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">$120,000</dd>
-                        </div>
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">About</dt>
-                        <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-                        </div>
-                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                        <dt class="text-sm/6 font-medium text-gray-900">Attachments</dt>
-                        <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                            <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
-                            <li class="flex items-center justify-between py-4 pr-5 pl-4 text-sm/6">
-                                <div class="flex w-0 flex-1 items-center">
-                                <PaperClipIcon class="size-5 shrink-0 text-gray-400" aria-hidden="true" />
-                                <div class="ml-4 flex min-w-0 flex-1 gap-2">
-                                    <span class="truncate font-medium">resume_back_end_developer.pdf</span>
-                                    <span class="shrink-0 text-gray-400">2.4mb</span>
-                                </div>
-                                </div>
-                                <div class="ml-4 shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-                                </div>
-                            </li>
-                            <li class="flex items-center justify-between py-4 pr-5 pl-4 text-sm/6">
-                                <div class="flex w-0 flex-1 items-center">
-                                <PaperClipIcon class="size-5 shrink-0 text-gray-400" aria-hidden="true" />
-                                <div class="ml-4 flex min-w-0 flex-1 gap-2">
-                                    <span class="truncate font-medium">coverletter_back_end_developer.pdf</span>
-                                    <span class="shrink-0 text-gray-400">4.5mb</span>
-                                </div>
-                                </div>
-                                <div class="ml-4 shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-                                </div>
-                            </li>
-                            </ul>
-                        </dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
+    <!--Heading-->
+    <section class="pt-15 pl-33 pr-33 py-16 text-center">
+        <h1 class="text-4xl font-bold">Abgeschlossenen Projekte</h1>
+        <p class="mt-4 text-lg text-gray-600">Hier finden Sie einen Überblick über bereits fertige Softwarelösungen.</p>
+    </section>
+
+    <!--Project-Cards-->
+    <section class="pt-15 pl-33 pr-33 pb-15 bg-gray-50">
+
+        <div class="flex flex-wrap gap-4 mb-8 justify-center">
+            <FwbButton 
+                size="sm" 
+                class="hover:cursor-pointer"
+                :color="active_cat.length === 0 ? 'default' : 'light'"
+                @click=reset_categories
+            >Alle</FwbButton>
+            <FwbButton 
+                size="sm" 
+                class="hover:cursor-pointer"
+                v-for="cat in all_categories"
+                :key="cat"
+                :color="active_cat.includes(cat) ? 'default' : 'light'"
+                @click="() => toggle_categorie(cat)"
+            >{{ cat }}</FwbButton>
         </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Number Converter</h3>
+                <p class="mt-2 text-gray-600">
+                    Konvertiert schnell und unkompliziert große Mengen an Werten 
+                    in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.
+                </p>
+                <a href="/projekte/projekt1" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 2" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">easyDNS</h3>
+                <p class="mt-2 text-gray-600">
+                    Einfaches Tool zum Prüfen und Abfragen von DNS-Records über 
+                    eine benutzerfreundliche GUI. 
+                </p>
+                <a href="/projekte/projekt2" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">LetterShark</h3>
+                <p class="mt-2 text-gray-600">
+                    Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch 
+                    noch genau auf den Workflow des Kunden abgestimmt ist. 
+                </p>
+                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="/images/screen_sip_rta.png" alt="SIP-RTT-Analyzer" class="w-full h-80 object-cover object-left">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">SIP-RTT Analyzer</h3>
+                <p class="mt-2 text-gray-600">
+                    Kleines, aber sehr effizientes CLI-Tool, dass nicht nur Paketlaufzeiten auf Netzwerkebene, 
+                    sondern auch auf Application-Ebene misst und aufbereitet.  
+                </p>
+                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">SIP-Proxy</h3>
+                <p class="mt-2 text-gray-600">
+                    Ein kompletter SIP-Proxy aus Eigenentwicklung, welcher vollen Zugriff auf die
+                    SIP-Kommunikation gewährt und nahezu jeden Header manipulierbar macht. 
+                </p>
+                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Invoice-Manager</h3>
+                <p class="mt-2 text-gray-600">
+                    Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung 
+                    von eigens ausgestellten Rechnungen. 
+                </p>
+                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">Website: ShutterSpecht</h3>
+                <p class="mt-2 text-gray-600">
+                    Unternehmenspräsentation für einen Fotografen. 
+                </p>
+                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+            </div>
+            </article>
+        </div>
+
+        <hr class="border-t border-blue-800 mb-16" />
+
+
     </section>
 </template>
   

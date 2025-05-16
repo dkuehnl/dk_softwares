@@ -99,9 +99,9 @@
     <div class="flex flex-row">
 
       <!--Left Box-->
-      <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1500px]">
+      <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1000px]">
         <img 
-          src="/images/project_management.png" 
+          src="/images/project_management_vertical.png" 
           alt="Picture" 
           class="w-full h-auto object-contain rounded-3xl shadow-2xl shadow-black"
         />
