@@ -7,6 +7,7 @@
     FwbNavbarLogo,
     FwbButton
   } from 'flowbite-vue'
+
 </script>
 
 <template>
@@ -17,18 +18,26 @@
     </template>
     <template #default="{isShowMenu}">
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
-        <fwb-navbar-link is-active link="#">
-          <RouterLink to="/" class="text-lg text-shadow-md">Home</RouterLink>
-        </fwb-navbar-link>
-        <fwb-navbar-link link="#">
-          <RouterLink to="/about" class="text-lg text-shadow-md">Services</RouterLink>
-        </fwb-navbar-link>
-        <fwb-navbar-link link="#">
-          <RouterLink to="/projects" class="text-lg text-shadow-md">Projects</RouterLink>
-        </fwb-navbar-link>
-        <fwb-navbar-link link="#">
-          <RouterLink to="/about" class="text-lg text-shadow-md">Contact</RouterLink>
-        </fwb-navbar-link>
+        <RouterLink to="/" class="text-lg text-shadow-md">
+          <fwb-navbar-link>
+            Home
+          </fwb-navbar-link>
+        </RouterLink>
+        <RouterLink to="/services" class="text-lg text-shadow-md">
+          <fwb-navbar-link>
+            Services
+          </fwb-navbar-link>
+        </RouterLink>
+        <RouterLink to="/projects" class="text-lg text-shadow-md">
+          <fwb-navbar-link>
+            Projects
+          </fwb-navbar-link>
+        </RouterLink>
+        <RouterLink to="/contact" class="text-lg text-shadow-md">
+          <fwb-navbar-link>
+            Contact
+          </fwb-navbar-link>
+        </RouterLink>
       </fwb-navbar-collapse>
     </template>
     <template #right-side>

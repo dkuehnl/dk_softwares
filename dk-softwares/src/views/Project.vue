@@ -2,7 +2,7 @@
   import { FwbButton } from 'flowbite-vue'
   import {ref, computed} from 'vue'
 
-  const all_categories = ['Desktop-Application', 'CLI-Tools', 'Server-Application', 'Web']
+  const all_categories = ['Desktop-Application', 'CLI-Tool', 'Server-Application', 'Web']
   const active_cat = ref<string[]>([])
   const project = ref([
     {
@@ -10,7 +10,7 @@
         title: 'Number Converter', 
         img: '', 
         description: 'Konvertiert schnell und unkompliziert große Mengen an Daten in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.',
-        categories: ['Desktop-Applications'],
+        categories: ['Desktop-Application'],
         link: ''
     }, 
     {
@@ -18,7 +18,7 @@
         title: 'easyDNS', 
         img: '', 
         description: 'Einfaches Tool zum Prüfen und Abfragen von DNS-Records über eine benutzerfreundliche GUI. ',
-        categories: ['Desktop-Applications'],
+        categories: ['Desktop-Application'],
         link: ''
     }, 
     {
@@ -26,7 +26,7 @@
         title: 'LetterShark', 
         img: '', 
         description: 'Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch noch genau auf den Workflow des Kunden abgestimmt ist. ',
-        categories: ['Desktop-Applications'],
+        categories: ['Desktop-Application'],
         link: ''
     }, 
     {
@@ -50,7 +50,7 @@
         title: 'Invoice-Manager', 
         img: '', 
         description: 'Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung von eigens ausgestellten Rechnungen.',
-        categories: ['Desktop-Applications'],
+        categories: ['Desktop-Application'],
         link: ''
     }, 
     {
@@ -62,6 +62,17 @@
         link: ''
     }
   ])
+
+  const upcoming_projects = [
+  {
+        id: 1, 
+        title: 'SRTP Decypher', 
+        img: '', 
+        description: 'Debugging-Tool zur Analyse von fehlerhaften SRTP-Streams.',
+        categories: ['Desktop-Application'],
+        link: ''
+    }, 
+  ]
 
   const filtered_projects = computed(() => {
     if (active_cat.value.length === 0) {
@@ -80,11 +91,11 @@
     } else {
         active_cat.value.splice(idx, 1)
     }
+  }
 
   function reset_categories() {
     console.log("click")
     active_cat.value = []
-  }
   }
 </script>
 
@@ -103,7 +114,7 @@
                 size="sm" 
                 class="hover:cursor-pointer"
                 :color="active_cat.length === 0 ? 'default' : 'light'"
-                @click=reset_categories
+                @click="reset_categories"
             >Alle</FwbButton>
             <FwbButton 
                 size="sm" 
@@ -112,98 +123,57 @@
                 :key="cat"
                 :color="active_cat.includes(cat) ? 'default' : 'light'"
                 @click="() => toggle_categorie(cat)"
-            >{{ cat }}</FwbButton>
+            >{{ cat }}
+            </FwbButton>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 1" class="w-full h-48 object-cover">
+            <article 
+                v-for="p in filtered_projects"
+                :key="p.id"
+                class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+            <img 
+                :src="p.img" 
+                :alt="p.title" 
+                class="w-full h-48 object-cover">
             <div class="p-4">
-                <h3 class="text-xl font-semibold">Number Converter</h3>
-                <p class="mt-2 text-gray-600">
-                    Konvertiert schnell und unkompliziert große Mengen an Werten 
-                    in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.
-                </p>
-                <a href="/projekte/projekt1" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 2" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">easyDNS</h3>
-                <p class="mt-2 text-gray-600">
-                    Einfaches Tool zum Prüfen und Abfragen von DNS-Records über 
-                    eine benutzerfreundliche GUI. 
-                </p>
-                <a href="/projekte/projekt2" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">LetterShark</h3>
-                <p class="mt-2 text-gray-600">
-                    Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch 
-                    noch genau auf den Workflow des Kunden abgestimmt ist. 
-                </p>
-                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="/images/screen_sip_rta.png" alt="SIP-RTT-Analyzer" class="w-full h-80 object-cover object-left">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">SIP-RTT Analyzer</h3>
-                <p class="mt-2 text-gray-600">
-                    Kleines, aber sehr effizientes CLI-Tool, dass nicht nur Paketlaufzeiten auf Netzwerkebene, 
-                    sondern auch auf Application-Ebene misst und aufbereitet.  
-                </p>
-                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">SIP-Proxy</h3>
-                <p class="mt-2 text-gray-600">
-                    Ein kompletter SIP-Proxy aus Eigenentwicklung, welcher vollen Zugriff auf die
-                    SIP-Kommunikation gewährt und nahezu jeden Header manipulierbar macht. 
-                </p>
-                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">Invoice-Manager</h3>
-                <p class="mt-2 text-gray-600">
-                    Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung 
-                    von eigens ausgestellten Rechnungen. 
-                </p>
-                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
-            </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <img src="" alt="Projekt 3" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">Website: ShutterSpecht</h3>
-                <p class="mt-2 text-gray-600">
-                    Unternehmenspräsentation für einen Fotografen. 
-                </p>
-                <a href="/projekte/projekt3" class="mt-4 inline-block text-blue-600">Mehr erfahren →</a>
+                <h3 class="text-xl font-semibold">{{ p.title }}</h3>
+                <p class="mt-2 text-gray-600">{{ p.description }}</p>
+                <a 
+                    :href="p.link" 
+                    class="mt-4 inline-block text-blue-600"
+                >Mehr erfahren →</a>
             </div>
             </article>
         </div>
 
-        <hr class="border-t border-blue-800 mb-16" />
+        <hr class="border-t border-blue-800 mb-5 mt-32" />
+    </section>
 
+    <section class="pt-1 pl-33 pr-33 py-16 text-center bg-gray-50">
+        <h2 class="text-2xl font-bold mb-12">Coming soon...</h2>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article 
+                v-for="p in upcoming_projects"
+                :key="p.id"
+                class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+            <img 
+                :src="p.img" 
+                :alt="p.title" 
+                class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold">{{ p.title }}</h3>
+                <p class="mt-2 text-gray-600">{{ p.description }}</p>
+                <a 
+                    :href="p.link" 
+                    class="mt-4 inline-block text-blue-600"
+                >Mehr erfahren →</a>
+            </div>
+            </article>
+        </div>
     </section>
 </template>
   

@@ -47,7 +47,7 @@
           </p>
           <div class="flex flex-row item-start leading-tight mt-3">  
             <FwbButton color="dark" class="mr-5 cursor-pointer">Contact me</FwbButton>
-            <FwbButton color="dark" outline class="cursor-pointer">More Info</FwbButton>
+            <FwbButton color="dark" outline class="cursor-pointer">Learn more</FwbButton>
           </div>
         </div>
       </div>
