@@ -23,7 +23,7 @@
         img: '', 
         description: 'Einfaches Tool zum Prüfen und Abfragen von DNS-Records über eine benutzerfreundliche GUI. ',
         categories: ['Desktop-Application'],
-        link: '/projects/easydns'
+        link: '/projects/easy_dns'
     }, 
     {
         id: 3, 
@@ -31,15 +31,15 @@
         img: '', 
         description: 'Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch noch genau auf den Workflow des Kunden abgestimmt ist. ',
         categories: ['Desktop-Application'],
-        link: ''
+        link: '/projects/letter_shark'
     }, 
     {
         id: 4, 
-        title: 'SIP-RTT Analyzer', 
+        title: 'SIP-RTA Analyzer', 
         img: '/images/screen_sip_rta.png', 
         description: 'Kleines, aber sehr effizientes CLI-Tool, dass nicht nur Paketlaufzeiten auf Netzwerkebene, sondern auch auf Application-Ebene misst und aufbereitet. ',
         categories: ['CLI-Tool'],
-        link: ''
+        link: '/projects/sip_rta'
     }, 
     {
         id: 5, 
@@ -47,7 +47,7 @@
         img: '', 
         description: 'Ein kompletter SIP-Proxy aus Eigenentwicklung, welcher vollen Zugriff auf die SIP-Kommunikation gewährt und nahezu jeden Header manipulierbar macht.',
         categories: ['Server-Application'],
-        link: ''
+        link: '/projects/sip_proxy'
     }, 
     {
         id: 6, 
@@ -55,7 +55,7 @@
         img: '', 
         description: 'Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung von eigens ausgestellten Rechnungen.',
         categories: ['Desktop-Application'],
-        link: ''
+        link: '/projects/invoice_manager'
     }, 
     {
         id: 7, 
