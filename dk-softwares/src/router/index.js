@@ -4,6 +4,7 @@ import Services from '../views/Services.vue'
 import Projects from '../views/Project.vue'
 import Contact from '../views/Contact.vue'
 import NumberConverter from '../components/NumberConverter.vue'
+import EasyDns from '../components/EasyDns.vue'
 
 
 const routes = [
@@ -12,6 +13,7 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/projects', component: Projects },
   { path: '/projects/number_converter', component: NumberConverter },
+  { path: '/projects/easydns', component: EasyDns },
 ]
 
 const router = createRouter({

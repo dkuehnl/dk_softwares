@@ -23,7 +23,7 @@
         img: '', 
         description: 'Einfaches Tool zum Prüfen und Abfragen von DNS-Records über eine benutzerfreundliche GUI. ',
         categories: ['Desktop-Application'],
-        link: ''
+        link: '/projects/easydns'
     }, 
     {
         id: 3, 

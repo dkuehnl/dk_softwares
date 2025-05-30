@@ -2,8 +2,11 @@
   import { ref, onMounted, onBeforeUnmount  } from 'vue'
 
   const images = ref([
-    {src: '/images/number_converter_01.png', alt: 'image-01'},
-    {src: '/images/number_converter_03.png', alt: 'image-02'},
+    {src: '/images/easydns_01.png', alt: 'image-01'},
+    {src: '/images/easydns_02.png', alt: 'image-02'},
+    {src: '/images/easydns_03.png', alt: 'image-03'},
+    {src: '/images/easydns_04.png', alt: 'image-04'},
+
   ])
 
   const currentIndex = ref(0)
@@ -85,16 +88,16 @@
   <section class="pt-15 pl-90 pr-90 pb-15 bg-gray-50">
     <div>
       <div class="px-4 sm:px-0">
-        <h3 class="text-base/7 font-semibold text-gray-900">Number-Converter</h3>
+        <h3 class="text-base/7 font-semibold text-gray-900">easyDNS</h3>
         <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">
-          Dieses Programm wurde speziell zur Unterstützung bei komplexen Datenanalysen entwickelt.
+          Ein Tool zum testen und analysieren von DNS-Responses interner und auch externer DNS-Resolver.
         </p>
       </div>
       <div class="mt-6 border-t border-gray-100">
         <dl class="divide-y divide-gray-100">
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Einsatzgebiert</dt>
-            <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Data-Analytics</dd>
+            <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">Netzwerkanalyse</dd>
           </div>
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Plattformen</dt>
@@ -102,17 +105,14 @@
           </div>
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Entwicklungszeit</dt>
-            <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">2 Monate</dd>
+            <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">1 Monat</dd>
           </div>
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Beschreibung</dt>
             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Es dient in erster Linie dazu, aus großen CSV-Datenbeständen hochperformante, exakt zugeschnittene Filter 
-              für Analyse-Tools wie ElasticSearch zu generieren.<br>
-              Das Tool analysiert automatisch die bereitgestellten Werte und wandelt sie in leistungsstarke Filterstrukturen um, 
-              die sich nahtlos in bestehende Systeme integrieren lassen. Dadurch können gezielte Abfragen und vertiefende Analysen 
-              durchgeführt werden – beispielsweise für die Erstellung dynamischer Dashboards, die Visualisierung von Trends oder 
-              die Identifikation von Auffälligkeiten in großen Datenmengen.<br> 
+              Hiermit können auf der Windowsplattform die gleichen DNS-Analysen durchgeführt werden wie unter Linux mit dig. 
+              Neben einer grafischen Aufbereitung der DNS-Antworten lässt sich auch leicht zwischen unterschiedlichen Request-Arten (z.B. NAPTR, SRV)
+              wechseln und Rückantworten direkt für eine nachfolgende, weitere Auflösung per Knopfdruck in die Suche übernehmen. 
             </dd>
           </div>
         </dl>
