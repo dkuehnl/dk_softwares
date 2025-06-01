@@ -12,7 +12,7 @@
     {
         id: 1, 
         title: 'Number Converter', 
-        img: '', 
+        img: '/images/number_converter_icon.png', 
         description: 'Konvertiert schnell und unkompliziert große Mengen an Daten in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.',
         categories: ['Desktop-Application'],
         link: '/projects/number_converter'
@@ -20,7 +20,7 @@
     {
         id: 2, 
         title: 'easyDNS', 
-        img: '', 
+        img: '/images/easydns_icon.png', 
         description: 'Einfaches Tool zum Prüfen und Abfragen von DNS-Records über eine benutzerfreundliche GUI. ',
         categories: ['Desktop-Application'],
         link: '/projects/easy_dns'
@@ -28,7 +28,7 @@
     {
         id: 3, 
         title: 'LetterShark', 
-        img: '', 
+        img: '/images/letter_shark_icon.png', 
         description: 'Hoch-Individualisierter Log-Parser, der neben dem passenden Log-Format auch noch genau auf den Workflow des Kunden abgestimmt ist. ',
         categories: ['Desktop-Application'],
         link: '/projects/letter_shark'
@@ -36,7 +36,7 @@
     {
         id: 4, 
         title: 'SIP-RTA Analyzer', 
-        img: '/images/screen_sip_rta.png', 
+        img: '/images/sip_rta_icon.png', 
         description: 'Kleines, aber sehr effizientes CLI-Tool, dass nicht nur Paketlaufzeiten auf Netzwerkebene, sondern auch auf Application-Ebene misst und aufbereitet. ',
         categories: ['CLI-Tool'],
         link: '/projects/sip_rta'
@@ -44,7 +44,7 @@
     {
         id: 5, 
         title: 'SIP-Proxy', 
-        img: '', 
+        img: '/images/sip_proxy_icon.png', 
         description: 'Ein kompletter SIP-Proxy aus Eigenentwicklung, welcher vollen Zugriff auf die SIP-Kommunikation gewährt und nahezu jeden Header manipulierbar macht.',
         categories: ['Server-Application'],
         link: '/projects/sip_proxy'
@@ -52,7 +52,7 @@
     {
         id: 6, 
         title: 'Invoice-Manager', 
-        img: '', 
+        img: '/images/invoice-manager_icon.png', 
         description: 'Schlankes und auf das Wesehntliche reduzierte Programm zur Erfassung und Nachhaltung von eigens ausgestellten Rechnungen.',
         categories: ['Desktop-Application'],
         link: '/projects/invoice_manager'
@@ -123,7 +123,7 @@
     </section>
 
     <!--Project-Cards-->
-    <section class="pt-15 pl-33 pr-33 pb-15 bg-gray-50">
+    <section class="pt-15 pl-33 pr-33 pb-15">
 
         <div class="flex flex-wrap gap-4 mb-8 justify-center">
             <FwbButton 
@@ -143,31 +143,33 @@
             </FwbButton>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <article 
-                v-for="p in filtered_projects"
-                :key="p.id"
-                class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            v-for="p in filtered_projects"
+            :key="p.id"
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition h-[28rem] flex flex-col"
             >
-            <img 
-                :src="p.img" 
-                :alt="p.title" 
-                class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">{{ p.title }}</h3>
-                <p class="mt-2 text-gray-600">{{ p.description }}</p>
-                <a 
+                <img 
+                    :src="p.img" 
+                    :alt="p.title" 
+                    class="w-full h-48 object-cover object-[top_left]">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                    <h3 class="text-xl font-semibold">{{ p.title }}</h3>
+                    <p class="mt-2 text-gray-600">{{ p.description }}</p>
+                    </div>
+                    <a 
                     @click="go_to_project(p.link)"
                     class="mt-4 inline-block text-blue-600 hover:cursor-pointer"
-                >Mehr erfahren →</a>
-            </div>
+                    >Mehr erfahren →</a>
+                </div>
             </article>
         </div>
 
         <hr class="border-t border-blue-800 mb-5 mt-32" />
     </section>
 
-    <section class="pt-1 pl-33 pr-33 py-16 text-center bg-gray-50">
+    <section class="pt-1 pl-33 pr-33 py-16 text-center">
         <h2 class="text-2xl font-bold mb-12">Coming soon...</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

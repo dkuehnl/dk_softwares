@@ -8,12 +8,19 @@
     FwbAccordionPanel } from 'flowbite-vue'
 
   import { Eye, FunnelPlus, ServerCog, ReceiptText, CodeXml, Wrench, MessageCircle } from 'lucide-vue-next'
+  import {useRouter} from 'vue-router'
+
 
   const greeting = [
     {value: "", name: ""},
     {value: "Herr", name: "Herr"}, 
     {value: "Frau", name: "Frau"}
   ]
+
+  const router = useRouter()
+  function go_to_project(link) {
+    router.push(link)
+  }
 </script>
 
 <template>
@@ -108,11 +115,11 @@
     <div class="flex flex-row">
 
       <!--Left Box-->
-      <div class="flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1000px]">
+      <div class="overflow-hidden h-[800px] rounded-3xl shadow-2xl shadow-black rounded-3xl flex items-start w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:w-[1000px]">
         <img 
           src="/images/project_management_vertical.png" 
           alt="Picture" 
-          class="w-full h-auto object-contain rounded-3xl shadow-2xl shadow-black"
+          class="w-full object-cover "
         />
       </div>
 
@@ -190,7 +197,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!--Boxes-->
-        <fwb-card href="#" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
+        <fwb-card @click="go_to_project('/projects/number_converter')" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
           <div class="p-5 h-full flex flex-col justify-between">
 
             <div class="mb-5"> 
@@ -232,7 +239,7 @@
           </div>
         </fwb-card>
 
-        <fwb-card href="#" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
+        <fwb-card @click="go_to_project('/projects/easy_dns')" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
           <div class="p-5 h-full flex flex-col justify-between">
 
             <div class="mb-5"> 
@@ -274,7 +281,7 @@
           </div>
         </fwb-card>
 
-        <fwb-card href="#" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
+        <fwb-card @click="go_to_project('/projects/invoice_manager')" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
           <div class="p-5 h-full flex flex-col justify-between">
 
             <div class="mb-5">  
@@ -316,7 +323,7 @@
           </div>
         </fwb-card>
 
-        <fwb-card href="#" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
+        <fwb-card @click="go_to_project('/projects/number_converter')" class="[&>*]:h-full group h-full ml-5 mr-5 min-w-xs shadow-none hover:shadow-xl transition-shadow duration-300 hover:bg-white">
           <div class="p-5 h-full flex flex-col justify-between">
 
             <div class="mb-5"> 

@@ -74,7 +74,7 @@
             <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white">About</h2>
             <ul class="">
               <li class="mb-4">
-                <a href="#" class="hover:underline ">About us</a>
+                <a href="#" class="hover:underline ">About me</a>
               </li>
               <li>
                 <a href="#" class="hover:underline">FAQ</a>
@@ -85,11 +85,8 @@
           <div>
             <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white">Legal</h2>
             <ul class="">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Privacy Policy</a>
-              </li>
               <li>
-                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                <RouterLink to="/impressum" class="hover:underline">Impressum & Datenschutz</RouterLink>
               </li>
             </ul>
           </div>

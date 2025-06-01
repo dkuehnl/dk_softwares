@@ -37,60 +37,59 @@
 
 <template>
   <!--Slider-->
-  <section class="pt-15 pl-33 pr-33 pb-15 bg-gray-50">
-      <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
-    <!-- Images -->
-    <div
-      class="flex transition-transform duration-700 ease-in-out"
-      :style="`transform: translateX(-${currentIndex * 100}%);`"
-    >
+  <section class="pt-15 pl-33 pr-33 pb-15">
+    <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
+      <!-- Images -->
       <div
-        v-for="(img, index) in images"
-        :key="index"
-        class="w-full flex-shrink-0"
+        class="flex transition-transform duration-700 ease-in-out"
+        :style="`transform: translateX(-${currentIndex * 100}%);`"
       >
-        <img
-          :src="img.src"
-          :alt="img.alt"
-          class="w-full h-96 object-contain bg-white"
-        />
+        <div
+          v-for="(img, index) in images"
+          :key="index"
+          class="w-full flex-shrink-0"
+        >
+          <img
+            :src="img.src"
+            :alt="img.alt"
+            class="w-full h-full object-contain bg-white"
+          />
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        @click="prevSlide"
+        class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2 hover:bg-opacity-100 transition"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button
+        @click="nextSlide"
+        class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2 hover:bg-opacity-100 transition"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Indicators -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <button
+          v-for="(img, index) in images"
+          :key="index"
+          @click="goToSlide(index)"
+          :class="['w-3 h-3 rounded-full', currentIndex === index ? 'bg-blue-600' : 'bg-gray-300']"
+        ></button>
       </div>
     </div>
-
-    <!-- Navigation Buttons -->
-    <button
-      @click="prevSlide"
-      class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2 hover:bg-opacity-100 transition"
-    >
-      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-    </button>
-
-    <button
-      @click="nextSlide"
-      class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2 hover:bg-opacity-100 transition"
-    >
-      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-    </button>
-
-    <!-- Indicators -->
-    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-      <button
-        v-for="(img, index) in images"
-        :key="index"
-        @click="goToSlide(index)"
-        :class="['w-3 h-3 rounded-full', currentIndex === index ? 'bg-blue-600' : 'bg-gray-300']"
-      ></button>
-    </div>
-  </div>
   </section>
 
   <!--Project-Facts-->
-  <section class="pt-15 pl-90 pr-90 pb-15 bg-gray-50">
+  <section class="pt-15 pl-90 pr-90 pb-15">
     <div>
       <div class="px-4 sm:px-0">
         <h3 class="text-base/7 font-semibold text-gray-900">LetterShark</h3>
         <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">
-          Ein stark individualisierter Log-Parser, der gezielt für die benötigten Logfile-Formate entwickelt wurde.  
+          Ein hochspezialisierter Log-Parser, exakt zugeschnitten auf spezifische Logformate und DevOps-Anforderungen.
         </p>
       </div>
       <div class="mt-6 border-t border-gray-100">
@@ -110,9 +109,12 @@
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Beschreibung</dt>
             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Dieses Tool hat ein sehr spezifisches Einsatzgebiet und wurde sehr genau auf die Bedürfnisse des DevOps-Teams abgestimmt. <br>
-              Neben dem Parsen der nicht-standardisierten Logfiles wurden zudem noch individuelle Suchfunktionen mit speziellem Highlighting 
-              und einer Export-Funktion realisiert. Ebenfalls wurde die spezielle File-Hirarchie, in dem die Logfiles vorliegen, berücksichtigt. 
+              LetterShark wurde entwickelt, um ein sehr konkretes Problem zu lösen: <br>
+              Die Auswertung nicht-standardisierter Logfiles mit komplexer Struktur. <br>
+              Das Tool orientiert sich vollständig an den Arbeitsprozessen des DevOps-Teams und bietet genau die Funktionen, 
+              die gebraucht werden. Dazu gehören unter anderem flexible Suchoptionen mit konfigurierbarem Highlighting, eine komfortable 
+              Exportfunktion sowie die Berücksichtigung einer speziellen, verschachtelten File-Hierarchie. LetterShark spart damit nicht 
+              nur enorm viel Zeit bei der Loganalyse, sondern reduziert auch menschliche Fehler durch strukturierte, visuelle Aufbereitung.
             </dd>
           </div>
         </dl>

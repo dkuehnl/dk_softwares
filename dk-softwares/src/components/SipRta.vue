@@ -2,7 +2,8 @@
   import { ref, onMounted, onBeforeUnmount  } from 'vue'
 
   const images = ref([
-    {src: '/images/screen_sip_rta.png', alt: 'image-01'},
+    {src: '/images/sip_rta_01.png', alt: 'image-01'},
+    {src: '/images/sip_rta_02.png', alt: 'image-02'},
   ])
 
   const currentIndex = ref(0)
@@ -33,7 +34,7 @@
 
 <template>
   <!--Slider-->
-  <section class="pt-15 pl-33 pr-33 pb-15 bg-gray-50">
+  <section class="pt-15 pl-33 pr-33 pb-15">
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
     <!-- Images -->
     <div
@@ -48,7 +49,7 @@
         <img
           :src="img.src"
           :alt="img.alt"
-          class="w-full h-96 object-contain bg-white"
+          class="w-full h-full object-contain bg-white"
         />
       </div>
     </div>
@@ -81,12 +82,12 @@
   </section>
 
   <!--Project-Facts-->
-  <section class="pt-15 pl-90 pr-90 pb-15 bg-gray-50">
+  <section class="pt-15 pl-90 pr-90 pb-15">
     <div>
       <div class="px-4 sm:px-0">
         <h3 class="text-base/7 font-semibold text-gray-900">SIP-RTA</h3>
         <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">
-          Der SIP-Round-Trip-Time-Analyzer wurde entwickelt, um nicht nur Laufzeiten auf Netzwerk-Ebene, sondern auch auf Applikations-Ebene zu analysieren. 
+          Ein leichtgewichtiges Tool zur Analyse von Round-Trip-Zeiten im SIP-Protokoll – nicht nur auf Netzwerk-, sondern auch auf Applikationsebene.
         </p>
       </div>
       <div class="mt-6 border-t border-gray-100">
@@ -106,9 +107,12 @@
           <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm/6 font-medium text-gray-900">Beschreibung</dt>
             <dd class="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Hierbei handelt es sich um ein kleines, performantes Tool, welches eine Analyse von Laufzeiten inklusive der 
-              Applikations-Ebene ermöglicht. Eingesetzt wird es in komplexen Netzwerken und kann entweder für eine Momentaufnahme 
-              oder auch als Dauertest genutzt werden. 
+              SIP-RTA wurde speziell für den Einsatz in komplexen Netzwerkumgebungen entwickelt, um Laufzeiten im SIP-Verkehr präzise zu 
+              messen und auszuwerten. <br>
+              Im Unterschied zu klassischen RTT-Tools beschränkt sich die Analyse nicht nur auf das reine Netzwerkverhalten, sondern 
+              bezieht auch Verzögerungen durch Applikationslogik mit ein. Das Tool arbeitet ressourcenschonend und eignet sich sowohl für punktuelle 
+              Analysen als auch für den Dauerbetrieb zur Überwachung. Damit liefert SIP-RTA wertvolle Einblicke in die Performance und Stabilität 
+              von Kommunikationssystemen.
             </dd>
           </div>
         </dl>
