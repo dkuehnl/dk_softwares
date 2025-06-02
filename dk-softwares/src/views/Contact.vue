@@ -5,7 +5,7 @@
 <template>
   <!-- Heading -->
   <section class="pt-15 px-4 sm:px-6 lg:px-20 text-center overflow-hidden">
-    <div class="px-4 sm:px-6 lg:px-20">
+    <div class="px-4 sm:px-6 xl:px-110">
       <form>
         <div class="space-y-12">
           <div class="border-b border-gray-900/10 pb-12">
