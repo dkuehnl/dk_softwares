@@ -58,8 +58,8 @@
               <span class="font-semibold">Jetzt Kontakt aufnehmen - Ich stehe Ihnen gerne zur Verfügung </span>
             </p>
             <div class="flex flex-row item-start leading-tight mt-3">  
-              <FwbButton color="dark" class="mr-5 cursor-pointer">Contact me</FwbButton>
-              <FwbButton color="dark" outline class="cursor-pointer">Learn more</FwbButton>
+              <FwbButton color="dark" class="mr-5 cursor-pointer bg-blue-800">Contact me</FwbButton>
+              <FwbButton color="dark" outline class="cursor-pointer hover:bg-blue-800">Learn more</FwbButton>
             </div>
           </div>
         </div>

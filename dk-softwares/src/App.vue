@@ -41,8 +41,8 @@
       </fwb-navbar-collapse>
     </template>
     <template #right-side>
-      <fwb-button color="dark" outline class="cursor-pointer">
-        Get started
+      <fwb-button color="dark" outline class="cursor-pointer hover:bg-blue-800">
+        Jetzt Anfragen!
       </fwb-button>
     </template>
   </fwb-navbar>
