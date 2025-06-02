@@ -25,8 +25,8 @@
             <p>97230 Estenfeld</p>
             <p>Tel: 015153710510</p>
             <p>
-                <a href="mailto:d.kuehnlein@outlook.com" class="text-blue-600 hover:underline">
-                d.kuehnlein@outlook.com
+                <a href="mailto:dk-software-solutions@outlook.com" class="text-blue-600 hover:underline">
+                dk-software-solutions@outlook.com
                 </a>
             </p>
         </div>
