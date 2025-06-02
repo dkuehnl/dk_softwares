@@ -79,12 +79,12 @@
   </section>
 
   <!--Key-Values-->
-  <section class="pl-4 pr-4 sm:pl-8 sm:pr-8 pt-20 pb-10">
+  <section class="pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-33 lg:pr-33 pt-20 pb-10">
     <hr class="border-t border-blue-800 mb-16" />
-    <div class="flex flex-wrap justify-center gap-x-8 gap-y-12">
+    <div class="flex flex-wrap justify-center lg:justify-evenly gap-x-8 gap-y-12">
       <!-- Feature Box 1 -->
       <div class="flex flex-col items-center sm:flex-row sm:items-start max-w-[300px] sm:max-w-[320px]">
-        <Eye class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
+        <Eye class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
         <div class="flex flex-col mt-2 sm:mt-0 sm:ml-3 text-center sm:text-left">
           <h5 class="text-lg font-semibold mb-1 leading-normal">Benutzerzentrierte Usability</h5>
           <p class="hidden sm:block">Intuitive Oberflächen, maßgeschneidert auf Ihre Zielgruppe.</p>
@@ -93,7 +93,7 @@
 
       <!-- Feature Box 2 -->
       <div class="flex flex-col items-center sm:flex-row sm:items-start max-w-[300px] sm:max-w-[320px]">
-        <Wrench class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
+        <Wrench class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
         <div class="flex flex-col mt-2 sm:mt-0 sm:ml-3 text-center sm:text-left">
           <h5 class="text-lg font-semibold mb-1 leading-normal">Lösungsorientierte Entwicklung</h5>
           <p class="hidden sm:block">Echte Softwarelösungen – kein unnötiger Funktionsballast.</p>
@@ -102,7 +102,7 @@
 
       <!-- Feature Box 3 -->
       <div class="flex flex-col items-center sm:flex-row sm:items-start max-w-[300px] sm:max-w-[320px]">
-        <MessageCircle class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
+        <MessageCircle class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 border-2 border-blue-800 p-2 rounded-md" />
         <div class="flex flex-col mt-2 sm:mt-0 sm:ml-3 text-center sm:text-left">
           <h5 class="text-lg font-semibold mb-1 leading-normal">Persönliche Beratung</h5>
           <p class="hidden sm:block">Fundierte Expertenberatung für optimale Entscheidungen.</p>
@@ -113,7 +113,7 @@
   </section>
 
   <!--Using Selling Point-->
-  <section class="px-2 sm:px-8 pb-20 lg:pt-15">
+  <section class="px-2 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33 ">
     <div class="flex flex-col xl:flex-row">
       <!--Left Box (Image) nur ab XL sichtbar-->
       <div class="hidden xl:flex overflow-hidden h-[800px] rounded-3xl shadow-2xl shadow-black w-full max-w-full xl:max-w-5xl 2xl:w-[1000px]">
@@ -138,7 +138,7 @@
               onclick="toggleContent(this)"
             >
               <span>Phase 1: Analyse & Konzeption</span>
-              <svg class="w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="md:hidden w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -154,7 +154,7 @@
               onclick="toggleContent(this)"
             >
               <span>Phase 2: Prototyp & Live-Demo</span>
-              <svg class="w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="md:hidden w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -170,7 +170,7 @@
               onclick="toggleContent(this)"
             >
               <span>Phase 3: Entwicklung</span>
-              <svg class="w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="md:hidden w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -186,7 +186,7 @@
               onclick="toggleContent(this)"
             >
               <span>Phase 4: Qualitätssicherung</span>
-              <svg class="w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="md:hidden w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -202,7 +202,7 @@
               onclick="toggleContent(this)"
             >
               <span>Phase 5: Go‑Live & Übergabe</span>
-              <svg class="w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="md:hidden w-4 h-4 ml-2 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
