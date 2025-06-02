@@ -41,7 +41,7 @@
       </fwb-navbar-collapse>
     </template>
     <template #right-side>
-      <fwb-button color="dark" outline class="cursor-pointer hover:bg-blue-800">
+      <fwb-button color="dark" outline class="cursor-pointer hover:bg-blue-800" href="/contact" tag="router-link">
         Jetzt Anfragen!
       </fwb-button>
     </template>

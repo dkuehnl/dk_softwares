@@ -1,5 +1,6 @@
 <script setup>
   import { ref, onMounted, onBeforeUnmount  } from 'vue'
+  import { FwbBreadcrumb, FwbBreadcrumbItem } from 'flowbite-vue'
 
   const images = ref([
     {src: '/images/easydns_01.png', alt: 'image-01'},
@@ -36,6 +37,16 @@
 </script>
 
 <template>
+  <div class="pt-5 pl-33 pr-33 pb-5">
+    <fwb-breadcrumb>
+      <fwb-breadcrumb-item href="/projects" tag="router-link">
+        Projects
+      </fwb-breadcrumb-item>
+      <fwb-breadcrumb-item href="#">
+        easyDNS
+      </fwb-breadcrumb-item>
+    </fwb-breadcrumb>
+  </div>
   <div class="flex flex-row pt-15 pl-33 pr-33 pb-15">
     <!--Slider-->
     <section class="md:w-1/2">

@@ -8,7 +8,7 @@
     FwbAccordionPanel } from 'flowbite-vue'
 
   import { Eye, FunnelPlus, ServerCog, ReceiptText, CodeXml, Wrench, MessageCircle } from 'lucide-vue-next'
-  import {useRouter} from 'vue-router'
+  import {useRouter, RouterLink} from 'vue-router'
 
 
   const greeting = [
@@ -58,7 +58,7 @@
               <span class="font-semibold">Jetzt Kontakt aufnehmen - Ich stehe Ihnen gerne zur Verfügung </span>
             </p>
             <div class="flex flex-row item-start leading-tight mt-3">  
-              <FwbButton color="dark" class="mr-5 cursor-pointer bg-blue-800">Contact me</FwbButton>
+              <FwbButton color="dark" class="mr-5 cursor-pointer bg-blue-800" href="/contact" tag="router-link">Contact me</FwbButton>
               <FwbButton color="dark" outline class="cursor-pointer hover:bg-blue-800">Learn more</FwbButton>
             </div>
           </div>
@@ -176,11 +176,12 @@
           </section>
         </div>
 
+        <!--
         <div class="flex justify-center mt-8">
           <h5 class="text-lg font-semibold cursor-pointer hover:underline">
             Mehr erfahren
           </h5>
-        </div>
+        </div>-->
       </div>
 
     </div>
