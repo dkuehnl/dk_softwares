@@ -108,90 +108,92 @@
 </script>
 
 <template>
-    <!--Heading-->
-    <section class="pt-15 pl-33 pr-33 py-16 text-center overflow-hidden">
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none" aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#0088cc] to-[#66ccff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-            </div>
-            <h1 class="text-4xl font-bold">Abgeschlossenen Projekte</h1>
-            <p class="mt-4 text-lg text-gray-600">Hier finden Sie einen Überblick über bereits fertige Softwarelösungen.</p>
-            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none" aria-hidden="true">
-                <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-gradient-to-tr from-[#0088cc] to-[#66ccff] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-            </div>
+  <!-- Heading -->
+  <section class="pt-10 px-4 sm:px-6 lg:px-20 text-center overflow-hidden">
+    <div class="relative isolate px-4 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-72 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#0088cc] to-[#66ccff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-144" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Abgeschlossene Projekte</h1>
+      <p class="mt-4 text-base sm:text-lg text-gray-600">Hier finden Sie einen Überblick über bereits fertige Softwarelösungen.</p>
+      <div class="absolute inset-x-0 top-[calc(100%-10rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-24rem)] pointer-events-none" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-72 -translate-x-1/2 bg-gradient-to-tr from-[#0088cc] to-[#66ccff] opacity-30 sm:left-[calc(50%+36rem)] sm:w-144" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project-Cards -->
+  <section class="pt-10 px-4 sm:px-6 lg:px-20 pb-10">
+    <!-- Category Buttons -->
+    <div class="flex flex-wrap gap-4 mb-8 justify-center">
+      <FwbButton 
+        size="sm" 
+        class="hover:cursor-pointer"
+        :color="active_cat.length === 0 ? 'default' : 'light'"
+        @click="reset_categories"
+      >Alle</FwbButton>
+      <FwbButton 
+        size="sm" 
+        class="hover:cursor-pointer"
+        v-for="cat in all_categories"
+        :key="cat"
+        :color="active_cat.includes(cat) ? 'default' : 'light'"
+        @click="() => toggle_categorie(cat)"
+      >{{ cat }}</FwbButton>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <article 
+        v-for="p in filtered_projects"
+        :key="p.id"
+        class="bg-white rounded-lg shadow-md hover:shadow-lg transition h-auto flex flex-col"
+      >
+        <img 
+          :src="p.img" 
+          :alt="p.title" 
+          class="w-full h-48 object-cover object-top"
+        >
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold">{{ p.title }}</h3>
+            <p class="mt-2 text-gray-600 text-sm sm:text-base">{{ p.description }}</p>
+          </div>
+          <a 
+            @click="go_to_project(p.link)"
+            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+          >Mehr erfahren →</a>
         </div>
-    </section>
+      </article>
+    </div>
 
-    <!--Project-Cards-->
-    <section class="pt-15 pl-33 pr-33 pb-15">
+    <hr class="border-t border-blue-800 my-10" />  
+  </section>
 
-        <div class="flex flex-wrap gap-4 mb-8 justify-center">
-            <FwbButton 
-                size="sm" 
-                class="hover:cursor-pointer"
-                :color="active_cat.length === 0 ? 'default' : 'light'"
-                @click="reset_categories"
-            >Alle</FwbButton>
-            <FwbButton 
-                size="sm" 
-                class="hover:cursor-pointer"
-                v-for="cat in all_categories"
-                :key="cat"
-                :color="active_cat.includes(cat) ? 'default' : 'light'"
-                @click="() => toggle_categorie(cat)"
-            >{{ cat }}
-            </FwbButton>
+  <!-- Coming Soon Section -->
+  <section class="pt-4 px-4 sm:px-6 lg:px-20 text-center pb-10">
+    <h2 class="text-2xl font-bold mb-8">Coming soon...</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article 
+        v-for="p in upcoming_projects"
+        :key="p.id"
+        class="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden flex flex-col"
+      >
+        <img 
+          :src="p.img" 
+          :alt="p.title" 
+          class="w-full h-48 object-cover"
+        >
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <h3 class="text-xl font-semibold">{{ p.title }}</h3>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">{{ p.description }}</p>
+          <a 
+            :href="p.link" 
+            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+          >Mehr erfahren →</a>
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <article 
-            v-for="p in filtered_projects"
-            :key="p.id"
-            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition h-[28rem] flex flex-col"
-            >
-                <img 
-                    :src="p.img" 
-                    :alt="p.title" 
-                    class="w-full h-48 object-cover object-[top_left]">
-                <div class="p-4 flex-1 flex flex-col justify-between">
-                    <div>
-                    <h3 class="text-xl font-semibold">{{ p.title }}</h3>
-                    <p class="mt-2 text-gray-600">{{ p.description }}</p>
-                    </div>
-                    <a 
-                    @click="go_to_project(p.link)"
-                    class="mt-4 inline-block text-blue-600 hover:cursor-pointer"
-                    >Mehr erfahren →</a>
-                </div>
-            </article>
-        </div>
-
-        <hr class="border-t border-blue-800 mb-5 mt-32" />
-    </section>
-
-    <section class="pt-1 pl-33 pr-33 py-16 text-center">
-        <h2 class="text-2xl font-bold mb-12">Coming soon...</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article 
-                v-for="p in upcoming_projects"
-                :key="p.id"
-                class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-            >
-            <img 
-                :src="p.img" 
-                :alt="p.title" 
-                class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h3 class="text-xl font-semibold">{{ p.title }}</h3>
-                <p class="mt-2 text-gray-600">{{ p.description }}</p>
-                <a 
-                    :href="p.link" 
-                    class="mt-4 inline-block text-blue-600"
-                >Mehr erfahren →</a>
-            </div>
-            </article>
-        </div>
-    </section>
+      </article>
+    </div>
+  </section>
 </template>
   

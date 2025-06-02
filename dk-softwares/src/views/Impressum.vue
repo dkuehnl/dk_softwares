@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="pt-5 pl-33 pr-33 pb-5">
+  <div class="pt-5 px-4 sm:px-6 lg:px-20 lg:pl-33 lg:pr-33 pb-5">
     <fwb-breadcrumb>
       <fwb-breadcrumb-item home href="/" tag="router-link">
         Home
@@ -14,7 +14,8 @@
       </fwb-breadcrumb-item>
     </fwb-breadcrumb>
   </div>
-  <section class="px-6 py-12 md:px-20 lg:px-72 space-y-8 text-gray-800">
+
+  <section class="px-4 sm:px-6 lg:px-20 lg:pl-33 lg:pr-33 py-12 space-y-8 text-gray-800">
     <div>
         <h1 class="text-3xl font-bold mb-4">Impressum</h1>
         <div class="space-y-1">
