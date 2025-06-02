@@ -65,8 +65,11 @@
               <li class="mb-4">
                 <a href="#" class="hover:underline">Web</a>
               </li>
-              <li>
+              <li class="mb-4">
                 <a href="#" class="hover:underline">Desktop</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Server</a>
               </li>
             </ul>
           </div>
@@ -74,10 +77,10 @@
             <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white">About</h2>
             <ul class="">
               <li class="mb-4">
-                <a href="#" class="hover:underline ">About me</a>
+                <RouterLink to="/about" class="hover:underline ">About me</RouterLink>
               </li>
               <li>
-                <a href="#" class="hover:underline">FAQ</a>
+                <RouterLink to="/faq" class="hover:underline">FAQ</RouterLink>
               </li>
             </ul>
           </div>

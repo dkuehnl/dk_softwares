@@ -10,6 +10,8 @@ import SipRta from '../components/SipRta.vue'
 import SipProxy from '../components/SipProxy.vue'
 import InvoiceManager from '../components/InvoiceManager.vue'
 import Impressum from '../views/Impressum.vue'
+import About from '../views/About.vue'
+import FAQ from '../views/FAQ.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -23,6 +25,8 @@ const routes = [
   { path: '/projects/sip_proxy', component: SipProxy },
   { path: '/projects/invoice_manager', component: InvoiceManager },
   { path: '/impressum', component: Impressum },
+  { path: '/about', component: About }, 
+  { path: '/faq', component: FAQ },
 ]
 
 const router = createRouter({
