@@ -34,7 +34,7 @@
 </script>
 
 <template>
-  <div class="pt-5 pl-33 pr-33 pb-5">
+  <div class="pt-5 px-4 sm:px-6 lg:px-20 lg:pl-33 lg:pr-33 pb-5">
       <fwb-breadcrumb>
         <fwb-breadcrumb-item href="/projects" tag="router-link">
           Projects
@@ -44,9 +44,10 @@
         </fwb-breadcrumb-item>
       </fwb-breadcrumb>
   </div>
-  <div class="flex flex-row pt-15 pl-33 pr-33 pb-15">
+
+  <div class="flex flex-col xl:flex-row xl:pt-10 px-4 sm:px-6 lg:px-20 pb-10">
     <!--Slider-->
-    <section class="md:w-1/2">
+    <section class="mx-auto w-4/5 xl:w-1/4 mb-5">
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
         <!-- Images -->
         <div
@@ -94,7 +95,7 @@
     </section>
 
     <!--Project-Facts-->
-    <section class="ml-10 md:w-1/2">
+    <section class="xl:ml-10 md:w-3/4">
       <div>
         <div class="px-4 sm:px-0">
           <h3 class="text-base/7 font-semibold text-gray-900">Number-Converter</h3>
