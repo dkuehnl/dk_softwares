@@ -12,7 +12,7 @@
     {
         id: 1, 
         title: 'Number Converter', 
-        img: '/images/number_converter_icon.png', 
+        img: '/images/number-converter_icon.png', 
         description: 'Konvertiert schnell und unkompliziert große Mengen an Daten in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.',
         categories: ['Desktop-Application'],
         link: '/projects/number_converter'
