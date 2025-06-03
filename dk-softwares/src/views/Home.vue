@@ -57,13 +57,13 @@
             </p>
             <div class="flex flex-row flex-wrap sm:flex-nowrap gap-4 mt-3 justify-center lg:justify-start">
               <FwbButton color="dark" class="cursor-pointer bg-blue-800 px-4 py-2 text-sm sm:text-base" href="/contact" tag="router-link">Contact me</FwbButton>
-              <FwbButton color="dark" outline class="cursor-pointer px-4 py-2 text-sm sm:text-base hover:bg-blue-800">Learn more</FwbButton>
+              <FwbButton color="dark" outline class="cursor-pointer px-4 py-2 text-sm sm:text-base hover:bg-blue-800" href="/services" tag="router-link">Learn more</FwbButton>
             </div>
           </div>
         </div>
 
         <!-- Bild Section, versteckt bei < xl -->
-        <div class="hidden xl:flex items-start w-full max-w-3xl flex-1 justify-center">
+        <div class="hidden xl:flex items-start w-full max-w-3xl flex-1 justify-center mt-25">
           <img
             src="/images/landing_page_2.png"
             alt="Picture"

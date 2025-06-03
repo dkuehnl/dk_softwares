@@ -1,8 +1,21 @@
 <script setup>
   import {RouterLink} from 'vue-router'
+  import { FwbBreadcrumb, FwbBreadcrumbItem } from 'flowbite-vue';
+
 </script>
 
 <template>
+  <div class="pt-5 pl-33 pr-33 pb-5">
+    <fwb-breadcrumb>
+      <fwb-breadcrumb-item home href="/" tag="router-link">
+        Home
+      </fwb-breadcrumb-item>
+      <fwb-breadcrumb-item href="#">
+        Contact
+      </fwb-breadcrumb-item>
+    </fwb-breadcrumb>
+  </div>
+
   <!-- Heading -->
   <section class="pt-15 px-4 sm:px-6 lg:px-20 text-center overflow-hidden">
     <div class="px-4 sm:px-6 xl:px-110">

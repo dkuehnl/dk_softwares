@@ -35,6 +35,9 @@
 <template>
   <div class="pt-5 px-4 sm:px-6 lg:px-20 lg:pl-33 lg:pr-33 pb-5">
     <fwb-breadcrumb>
+      <fwb-breadcrumb-item home href="/" tag="router-link">
+        Home
+      </fwb-breadcrumb-item>
       <fwb-breadcrumb-item href="/projects" tag="router-link">
         Projects
       </fwb-breadcrumb-item>

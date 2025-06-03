@@ -1,9 +1,20 @@
 <script setup>
-import { FwbButton } from 'flowbite-vue';
+import { FwbButton, FwbBreadcrumb, FwbBreadcrumbItem } from 'flowbite-vue';
 </script>
 
 <template>
-  <section class="pt-10 px-4 pb-10 sm:px-6 lg:px-20 lg:pb-20 overflow-hidden">
+  <section class="pb-10 pt-2 pl-3 sm:pb-6 lg:pb-20 text-center overflow-hidden">
+    <div class="xl:pl-33 xl:pr-33 pb-5 text-left">
+      <fwb-breadcrumb>
+        <fwb-breadcrumb-item home href="/" tag="router-link">
+          Home
+        </fwb-breadcrumb-item>
+        <fwb-breadcrumb-item href="#">
+          Services
+        </fwb-breadcrumb-item>
+      </fwb-breadcrumb>
+    </div>
+
     <div class="relative isolate px-4 pt-14 lg:px-8 max-w-3xl mx-auto text-left">
       <div
         class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none"
