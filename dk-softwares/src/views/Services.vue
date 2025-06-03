@@ -37,7 +37,7 @@ import { FwbButton } from 'flowbite-vue';
     </div>
   </section>
 
-  <section class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33 bg-[#f2f2f2]">
+  <section id="desktop" class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33 bg-[#f2f2f2]">
     <div class="flex flex-col xl:flex-row xl:items-center">
       <!--Left Text-Box-->
       <div class="flex flex-col xl:ml-16 xl:mr-40 w-full">
@@ -66,7 +66,7 @@ import { FwbButton } from 'flowbite-vue';
     </div>
   </section>
 
-  <section class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33">
+  <section id="server" class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33">
     <div class="flex flex-col xl:flex-row xl:items-center">
       <!--Left Box (Image) nur ab XL sichtbar-->
       <div class="hidden xl:flex xl:ml-16 xl:mr-40 overflow-hidden h-full rounded-xl shadow-2xl shadow-black">
@@ -95,7 +95,7 @@ import { FwbButton } from 'flowbite-vue';
     </div>
   </section>
 
-  <section class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33 bg-[#f2f2f2]">
+  <section id="web" class="px-6 sm:px-8 pb-20 lg:pt-15 lg:pl-33 lg:pr-33 bg-[#f2f2f2]">
     <div class="flex flex-col xl:flex-row xl:items-center">
       <!--Left Text-Box-->
       <div class="flex flex-col xl:ml-16 xl:mr-40 w-full">
