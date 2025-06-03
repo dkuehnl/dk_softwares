@@ -126,7 +126,7 @@
 
       <!--Right Box-->
       <div class="flex flex-col xl:ml-16 w-full">
-        <h2 class="text-4xl font-semibold mb-10 xl:mb-3 leading-tight text-center xl:text-left">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl mt-5 font-semibold mb-15 xl:mb-15 leading-tight text-center xl:text-left">
           Der Fahrplan für Ihre Lösung
         </h2>
 
@@ -218,7 +218,7 @@
   <!--Project-Section-->
   <section class="bg-[#f2f2f2] pt-10 pl-2 pr-2 xl:pt-30 xl:pl-10 xl:pr-10 pb-30">
     <div class="flex flex-col items-center">
-      <h2 class="text-4xl font-semibold mb-10 leading-tight text-center xl:text-left">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl mt-5 font-semibold mb-15 xl:mb-20 leading-tight text-center xl:text-left">
         Mehr zu meinen letzten Projekten
       </h2>
 
