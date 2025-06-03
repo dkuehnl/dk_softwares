@@ -15,7 +15,7 @@ import FAQ from '../views/FAQ.vue'
 
 const routes = [
   { path: '/', component: Home },
-  //{ path: '/services', component: Services },
+  { path: '/services', component: Services },
   { path: '/contact', component: Contact },
   { path: '/projects', component: Projects },
   { path: '/projects/number_converter', component: NumberConverter },

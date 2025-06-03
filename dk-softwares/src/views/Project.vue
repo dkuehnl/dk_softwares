@@ -60,7 +60,7 @@
     {
         id: 7, 
         title: 'Website: ShutterSpecht', 
-        img: '', 
+        img: '/images/shutter_specht_icon.png', 
         description: 'Unternehmenspräsentation für einen Fotografen.',
         categories: ['Web'],
         link: ''
@@ -71,7 +71,7 @@
   {
         id: 1, 
         title: 'SRTP Decypher', 
-        img: '', 
+        img: '/images/srtp_decypher.png', 
         description: 'Debugging-Tool zur Analyse von fehlerhaften SRTP-Streams.',
         categories: ['Desktop-Application'],
         link: ''
@@ -161,7 +161,7 @@
           </div>
           <a 
             @click="go_to_project(p.link)"
-            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+            class="mt-4 inline-block text-blue-600 hover:underline hover:cursor-pointer text-sm sm:text-base"
           >Mehr erfahren →</a>
         </div>
       </article>
@@ -189,7 +189,7 @@
           <p class="mt-2 text-gray-600 text-sm sm:text-base">{{ p.description }}</p>
           <a 
             :href="p.link" 
-            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+            class="mt-4 inline-block text-blue-600 hover:underline cursor-pointer text-sm sm:text-base"
           >Mehr erfahren →</a>
         </div>
       </article>

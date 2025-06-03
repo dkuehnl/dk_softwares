@@ -23,11 +23,11 @@
             Home
           </fwb-navbar-link>
         </RouterLink>
-        <!--<RouterLink to="/services" class="text-lg text-shadow-md">
+        <RouterLink to="/services" class="text-lg text-shadow-md">
           <fwb-navbar-link>
             Services
           </fwb-navbar-link>
-        </RouterLink>-->
+        </RouterLink>
         <RouterLink to="/projects" class="text-lg text-shadow-md">
           <fwb-navbar-link>
             Projects
