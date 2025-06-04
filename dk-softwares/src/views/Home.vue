@@ -57,13 +57,13 @@
             </p>
             <div class="flex flex-row flex-wrap sm:flex-nowrap gap-4 mt-3 justify-center lg:justify-start">
               <FwbButton color="dark" class="cursor-pointer bg-blue-800 px-4 py-2 text-sm sm:text-base" href="/contact" tag="router-link">Contact me</FwbButton>
-              <FwbButton color="dark" outline class="cursor-pointer px-4 py-2 text-sm sm:text-base hover:bg-blue-800">Learn more</FwbButton>
+              <FwbButton color="dark" outline class="cursor-pointer px-4 py-2 text-sm sm:text-base hover:bg-blue-800" href="/services" tag="router-link">Learn more</FwbButton>
             </div>
           </div>
         </div>
 
         <!-- Bild Section, versteckt bei < xl -->
-        <div class="hidden xl:flex items-start w-full max-w-3xl flex-1 justify-center">
+        <div class="hidden xl:flex items-start w-full max-w-3xl flex-1 justify-center mt-25">
           <img
             src="/images/landing_page_2.png"
             alt="Picture"
@@ -126,7 +126,7 @@
 
       <!--Right Box-->
       <div class="flex flex-col xl:ml-16 w-full">
-        <h2 class="text-4xl font-semibold mb-10 xl:mb-3 leading-tight text-center xl:text-left">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl mt-5 font-semibold mb-15 xl:mb-15 leading-tight text-center xl:text-left">
           Der Fahrplan für Ihre Lösung
         </h2>
 
@@ -218,7 +218,7 @@
   <!--Project-Section-->
   <section class="bg-[#f2f2f2] pt-10 pl-2 pr-2 xl:pt-30 xl:pl-10 xl:pr-10 pb-30">
     <div class="flex flex-col items-center">
-      <h2 class="text-4xl font-semibold mb-10 leading-tight text-center xl:text-left">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl mt-5 font-semibold mb-15 xl:mb-20 leading-tight text-center xl:text-left">
         Mehr zu meinen letzten Projekten
       </h2>
 

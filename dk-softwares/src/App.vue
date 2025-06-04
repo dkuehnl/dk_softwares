@@ -23,11 +23,11 @@
             Home
           </fwb-navbar-link>
         </RouterLink>
-        <!--<RouterLink to="/services" class="text-lg text-shadow-md">
+        <RouterLink to="/services" class="text-lg text-shadow-md">
           <fwb-navbar-link>
             Services
           </fwb-navbar-link>
-        </RouterLink>-->
+        </RouterLink>
         <RouterLink to="/projects" class="text-lg text-shadow-md">
           <fwb-navbar-link>
             Projects
@@ -64,13 +64,13 @@
             <h2 class="mb-4 text-sm font-semibold uppercase">Services</h2>
             <ul>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Web</a>
+                <RouterLink :to="{ path: '/services', hash: '#web' }" class="hover:underline">Web</RouterLink>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Desktop</a>
+                <RouterLink :to="{ path: '/services', hash: '#desktop' }" class="hover:underline">Desktop</RouterLink>
               </li>
               <li>
-                <a href="#" class="hover:underline">Server</a>
+                <RouterLink :to="{ path: '/services', hash: '#server' }" class="hover:underline">Server</RouterLink>
               </li>
             </ul>
           </div>

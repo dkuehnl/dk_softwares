@@ -15,7 +15,7 @@ import FAQ from '../views/FAQ.vue'
 
 const routes = [
   { path: '/', component: Home },
-  //{ path: '/services', component: Services },
+  { path: '/services', component: Services },
   { path: '/contact', component: Contact },
   { path: '/projects', component: Projects },
   { path: '/projects/number_converter', component: NumberConverter },
@@ -33,9 +33,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
     scrollBehavior(to, from, savedPosition) {
-    // Ignoriere savedPosition, damit immer oben gestartet wird
-    return { top: 0 }
-  },
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: "smooth" // optional, macht das Scrollen animatey/flüssig
+        }
+      }
+      return { top: 0 }
+    },
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active'
 })

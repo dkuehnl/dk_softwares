@@ -3,8 +3,11 @@
   import { FwbBreadcrumb, FwbBreadcrumbItem } from 'flowbite-vue'
 
   const images = ref([
-    {src: '/images/number_converter_01.png', alt: 'image-01'},
-    {src: '/images/number_converter_03.png', alt: 'image-02'},
+    {src: '/images/number-converter_01.png', alt: 'image-01'},
+    {src: '/images/number-converter_02.png', alt: 'image-02'},
+    {src: '/images/number-converter_03.png', alt: 'image-03'},
+    {src: '/images/number-converter_04.png', alt: 'image-04'},
+
   ])
 
   const currentIndex = ref(0)
@@ -36,6 +39,9 @@
 <template>
   <div class="pt-5 px-4 sm:px-6 lg:px-20 lg:pl-33 lg:pr-33 pb-5">
       <fwb-breadcrumb>
+        <fwb-breadcrumb-item home href="/" tag="router-link">
+          Home
+        </fwb-breadcrumb-item>
         <fwb-breadcrumb-item href="/projects" tag="router-link">
           Projects
         </fwb-breadcrumb-item>
@@ -47,7 +53,7 @@
 
   <div class="flex flex-col xl:flex-row xl:pt-10 px-4 sm:px-6 lg:px-20 pb-10">
     <!--Slider-->
-    <section class="mx-auto w-4/5 xl:w-1/4 mb-5">
+    <section class="mx-auto w-4/5 xl:w-2/4 mb-5">
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
         <!-- Images -->
         <div

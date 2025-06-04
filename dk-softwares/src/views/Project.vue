@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { FwbButton } from 'flowbite-vue'
+  import { FwbButton, FwbBreadcrumb, FwbBreadcrumbItem } from 'flowbite-vue'
   import {ref, computed} from 'vue'
   import {useRouter} from 'vue-router'
 
@@ -12,7 +12,7 @@
     {
         id: 1, 
         title: 'Number Converter', 
-        img: '/images/number_converter_icon.png', 
+        img: '/images/number-converter_icon.png', 
         description: 'Konvertiert schnell und unkompliziert große Mengen an Daten in vordefinierte oder eigene Filter für die gängigsten Data-Analytic-Tools.',
         categories: ['Desktop-Application'],
         link: '/projects/number_converter'
@@ -60,7 +60,7 @@
     {
         id: 7, 
         title: 'Website: ShutterSpecht', 
-        img: '', 
+        img: '/images/shutter_specht_icon.png', 
         description: 'Unternehmenspräsentation für einen Fotografen.',
         categories: ['Web'],
         link: ''
@@ -71,7 +71,7 @@
   {
         id: 1, 
         title: 'SRTP Decypher', 
-        img: '', 
+        img: '/images/srtp_decypher.png', 
         description: 'Debugging-Tool zur Analyse von fehlerhaften SRTP-Streams.',
         categories: ['Desktop-Application'],
         link: ''
@@ -108,8 +108,19 @@
 </script>
 
 <template>
-  <!-- Heading -->
-  <section class="pt-10 px-4 sm:px-6 lg:px-20 text-center overflow-hidden">
+  <!-- Heading pt-10 px-4 sm:px-6 lg:px-20 -->
+  <section class="pb-10 pt-2 pl-3 sm:pb-6 lg:pb-20 text-center overflow-hidden">
+    <div class="xl:pl-33 xl:pr-33 pb-5 text-left">
+      <fwb-breadcrumb>
+        <fwb-breadcrumb-item home href="/" tag="router-link">
+          Home
+        </fwb-breadcrumb-item>
+        <fwb-breadcrumb-item href="#">
+          Projects
+        </fwb-breadcrumb-item>
+      </fwb-breadcrumb>
+    </div>
+
     <div class="relative isolate px-4 pt-14 lg:px-8">
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-72 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#0088cc] to-[#66ccff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-144" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -161,7 +172,7 @@
           </div>
           <a 
             @click="go_to_project(p.link)"
-            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+            class="mt-4 inline-block text-blue-600 hover:underline hover:cursor-pointer text-sm sm:text-base"
           >Mehr erfahren →</a>
         </div>
       </article>
@@ -189,7 +200,7 @@
           <p class="mt-2 text-gray-600 text-sm sm:text-base">{{ p.description }}</p>
           <a 
             :href="p.link" 
-            class="mt-4 inline-block text-blue-600 hover:underline text-sm sm:text-base"
+            class="mt-4 inline-block text-blue-600 hover:underline cursor-pointer text-sm sm:text-base"
           >Mehr erfahren →</a>
         </div>
       </article>
